@@ -1,6 +1,8 @@
 ---
 import flower from '../assets/beautiful-flower.png';
 import CherryBlossomConfetti from './Confetti';
+
+const apologizingTo = Astro.props.apologizingTo;
 ---
 <CherryBlossomConfetti client:load/>
 <div class="bg-color">
@@ -8,7 +10,7 @@ import CherryBlossomConfetti from './Confetti';
 		<img src={flower.src} alt="flower" class="flower" draggable="false"/>
 		<div class="very-center">
 			<h1 class="sorry">I'm sorrie :c</h1>
-			<p class="sub">I know I upset you, Hannah, and I get it if you're angry or sad. But... please, can you find it in your heart to forgive me? I really am sorry</p>
+			<p class="sub">I know I upset you, {apologizingTo}, and I get it if you're angry or sad. But... please, can you find it in your heart to forgive me? I really am sorry</p>
 		</div>
 	</div>
 </div>
